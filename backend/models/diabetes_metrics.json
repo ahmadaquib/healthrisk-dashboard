@@ -1,0 +1,223 @@
+{
+  "disease": "diabetes",
+  "dataset_info": {
+    "name": "Pima Indians Diabetes Dataset",
+    "source": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)",
+    "source_details": "Loaded via OpenML 'diabetes' v1 (ID 37)",
+    "source_url": "https://www.openml.org/search?type=data&id=37",
+    "total_records": 768,
+    "num_features": 8,
+    "feature_names": [
+      "Pregnancies",
+      "Glucose",
+      "BloodPressure",
+      "SkinThickness",
+      "Insulin",
+      "BMI",
+      "DiabetesPedigreeFunction",
+      "Age"
+    ],
+    "target_definition": "Diabetes diagnosis outcome (1 = diabetic, 0 = non-diabetic)",
+    "class_balance": {
+      "Non-diabetic (0)": 500,
+      "Diabetic (1)": 268
+    },
+    "class_balance_percent": {
+      "Non-diabetic (0)": "65.1%",
+      "Diabetic (1)": "34.9%"
+    },
+    "preprocessing_summary": "Zeros in Glucose, BloodPressure, SkinThickness, Insulin, and BMI treated as missing (NaN) and median-imputed."
+  },
+  "features": [
+    {
+      "name": "Pregnancies",
+      "label": "Pregnancies",
+      "unit": "count",
+      "description": "Number of times pregnant",
+      "training_min": 0.0,
+      "training_max": 17.0,
+      "training_mean": 3.8192,
+      "min_sane": 0,
+      "max_sane": 25,
+      "step": 1,
+      "default": 3.8192
+    },
+    {
+      "name": "Glucose",
+      "label": "Plasma Glucose",
+      "unit": "mg/dL",
+      "description": "2-hour oral glucose tolerance test",
+      "training_min": 56.0,
+      "training_max": 199.0,
+      "training_mean": 121.7016,
+      "min_sane": 40,
+      "max_sane": 400,
+      "step": 1,
+      "default": 121.7016
+    },
+    {
+      "name": "BloodPressure",
+      "label": "Diastolic Blood Pressure",
+      "unit": "mm Hg",
+      "description": "Resting blood pressure",
+      "training_min": 24.0,
+      "training_max": 122.0,
+      "training_mean": 72.1455,
+      "min_sane": 30,
+      "max_sane": 200,
+      "step": 1,
+      "default": 72.1455
+    },
+    {
+      "name": "SkinThickness",
+      "label": "Triceps Skinfold Thickness",
+      "unit": "mm",
+      "description": "Measurement of body fat layer",
+      "training_min": 7.0,
+      "training_max": 99.0,
+      "training_mean": 29.0592,
+      "min_sane": 2,
+      "max_sane": 100,
+      "step": 1,
+      "default": 29.0592
+    },
+    {
+      "name": "Insulin",
+      "label": "2-Hour Serum Insulin",
+      "unit": "mu U/ml",
+      "description": "Fasting or 2-hour serum insulin",
+      "training_min": 15.0,
+      "training_max": 744.0,
+      "training_mean": 149.0772,
+      "min_sane": 5,
+      "max_sane": 900,
+      "step": 1,
+      "default": 149.0772
+    },
+    {
+      "name": "BMI",
+      "label": "Body Mass Index (BMI)",
+      "unit": "kg/m\u00b2",
+      "description": "Weight in kg / (height in m)\u00b2",
+      "training_min": 18.2,
+      "training_max": 67.1,
+      "training_mean": 32.4489,
+      "min_sane": 10.0,
+      "max_sane": 70.0,
+      "step": 0.1,
+      "default": 32.4489
+    },
+    {
+      "name": "DiabetesPedigreeFunction",
+      "label": "Diabetes Pedigree Function",
+      "unit": "score",
+      "description": "Genetic risk score based on family history",
+      "training_min": 0.084,
+      "training_max": 2.329,
+      "training_mean": 0.4774,
+      "min_sane": 0.05,
+      "max_sane": 3.0,
+      "step": 0.01,
+      "default": 0.4774
+    },
+    {
+      "name": "Age",
+      "label": "Age",
+      "unit": "years",
+      "description": "Patient age in years",
+      "training_min": 21.0,
+      "training_max": 81.0,
+      "training_mean": 33.3664,
+      "min_sane": 18,
+      "max_sane": 120,
+      "step": 1,
+      "default": 33.3664
+    }
+  ],
+  "holdout_metrics": {
+    "accuracy": 0.7078,
+    "precision": 0.6,
+    "recall": 0.5,
+    "f1": 0.5455,
+    "roc_auc": 0.813,
+    "confusion_matrix": [
+      [
+        82,
+        18
+      ],
+      [
+        27,
+        27
+      ]
+    ]
+  },
+  "cv_comparison": {
+    "Baseline (Majority Class)": {
+      "accuracy_mean": 0.651,
+      "accuracy_std": 0.0021,
+      "f1_mean": 0.0,
+      "f1_std": 0.0,
+      "roc_auc_mean": 0.5,
+      "roc_auc_std": 0.0
+    },
+    "Logistic Regression": {
+      "accuracy_mean": 0.7669,
+      "accuracy_std": 0.0289,
+      "f1_mean": 0.6242,
+      "f1_std": 0.0544,
+      "roc_auc_mean": 0.8354,
+      "roc_auc_std": 0.0275
+    },
+    "Random Forest (200 trees)": {
+      "accuracy_mean": 0.7646,
+      "accuracy_std": 0.0249,
+      "f1_mean": 0.6412,
+      "f1_std": 0.0417,
+      "roc_auc_mean": 0.8286,
+      "roc_auc_std": 0.027
+    }
+  },
+  "example_patients": {
+    "high_risk": {
+      "values": {
+        "Pregnancies": 0.0,
+        "Glucose": 180.0,
+        "BloodPressure": 78.0,
+        "SkinThickness": 63.0,
+        "Insulin": 14.0,
+        "BMI": 59.4,
+        "DiabetesPedigreeFunction": 2.42,
+        "Age": 25.0
+      },
+      "probability": 0.9944,
+      "actual_label": 1
+    },
+    "low_risk": {
+      "values": {
+        "Pregnancies": 0.0,
+        "Glucose": 73.0,
+        "BloodPressure": 72.0,
+        "SkinThickness": 29.0,
+        "Insulin": 125.0,
+        "BMI": 21.1,
+        "DiabetesPedigreeFunction": 0.342,
+        "Age": 25.0
+      },
+      "probability": 0.0103,
+      "actual_label": 0
+    }
+  },
+  "coefficients": {
+    "Pregnancies": 0.3774,
+    "Glucose": 1.1826,
+    "BloodPressure": -0.0441,
+    "SkinThickness": 0.0283,
+    "Insulin": -0.0661,
+    "BMI": 0.6887,
+    "DiabetesPedigreeFunction": 0.2333,
+    "Age": 0.1478
+  },
+  "intercept": -0.8722,
+  "test_size": 154,
+  "train_size": 614
+}

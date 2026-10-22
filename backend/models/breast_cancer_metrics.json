@@ -1,0 +1,257 @@
+{
+  "disease": "breast_cancer",
+  "dataset_info": {
+    "name": "Breast Cancer Wisconsin (Diagnostic) Dataset",
+    "source": "UCI Machine Learning Repository",
+    "source_details": "Loaded from scikit-learn (load_breast_cancer)",
+    "source_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+    "total_records": 569,
+    "num_features": 10,
+    "feature_names": [
+      "mean_radius",
+      "mean_texture",
+      "mean_perimeter",
+      "mean_area",
+      "mean_smoothness",
+      "mean_compactness",
+      "mean_concavity",
+      "mean_concave_points",
+      "mean_symmetry",
+      "mean_fractal_dimension"
+    ],
+    "target_definition": "Tumor malignancy status (1 = malignant, 0 = benign)",
+    "class_balance": {
+      "Benign (0)": 357,
+      "Malignant (1)": 212
+    },
+    "class_balance_percent": {
+      "Benign (0)": "62.7%",
+      "Malignant (1)": "37.3%"
+    },
+    "preprocessing_summary": "Target calibrated so 1 = malignant; strictly restricted to the 10 core mean nuclear morphology features."
+  },
+  "features": [
+    {
+      "name": "mean_radius",
+      "label": "Mean Radius",
+      "unit": "mm",
+      "description": "Mean distance from center to points on the perimeter",
+      "training_min": 6.981,
+      "training_max": 28.11,
+      "training_mean": 14.1661,
+      "min_sane": 5.0,
+      "max_sane": 35.0,
+      "step": 0.01,
+      "default": 14.1661
+    },
+    {
+      "name": "mean_texture",
+      "label": "Mean Texture",
+      "unit": "std dev",
+      "description": "Standard deviation of gray-scale values",
+      "training_min": 9.71,
+      "training_max": 39.28,
+      "training_mean": 19.4177,
+      "min_sane": 5.0,
+      "max_sane": 45.0,
+      "step": 0.01,
+      "default": 19.4177
+    },
+    {
+      "name": "mean_perimeter",
+      "label": "Mean Perimeter",
+      "unit": "mm",
+      "description": "Mean size of the core tumor perimeter",
+      "training_min": 43.79,
+      "training_max": 188.5,
+      "training_mean": 92.2159,
+      "min_sane": 30.0,
+      "max_sane": 250.0,
+      "step": 0.1,
+      "default": 92.2159
+    },
+    {
+      "name": "mean_area",
+      "label": "Mean Area",
+      "unit": "mm\u00b2",
+      "description": "Mean tumor area",
+      "training_min": 143.5,
+      "training_max": 2501.0,
+      "training_mean": 659.5782,
+      "min_sane": 100.0,
+      "max_sane": 3000.0,
+      "step": 0.1,
+      "default": 659.5782
+    },
+    {
+      "name": "mean_smoothness",
+      "label": "Mean Smoothness",
+      "unit": "ratio",
+      "description": "Local variation in radius lengths",
+      "training_min": 0.0625,
+      "training_max": 0.1634,
+      "training_mean": 0.096,
+      "min_sane": 0.04,
+      "max_sane": 0.25,
+      "step": 0.001,
+      "default": 0.096
+    },
+    {
+      "name": "mean_compactness",
+      "label": "Mean Compactness",
+      "unit": "ratio",
+      "description": "Perimeter\u00b2 / area - 1.0",
+      "training_min": 0.0194,
+      "training_max": 0.3454,
+      "training_mean": 0.1038,
+      "min_sane": 0.01,
+      "max_sane": 0.4,
+      "step": 0.001,
+      "default": 0.1038
+    },
+    {
+      "name": "mean_concavity",
+      "label": "Mean Concavity",
+      "unit": "ratio",
+      "description": "Severity of concave portions of the contour",
+      "training_min": 0.0,
+      "training_max": 0.4268,
+      "training_mean": 0.0892,
+      "min_sane": 0.0,
+      "max_sane": 0.5,
+      "step": 0.001,
+      "default": 0.0892
+    },
+    {
+      "name": "mean_concave_points",
+      "label": "Mean Concave Points",
+      "unit": "ratio",
+      "description": "Number of concave portions of the contour",
+      "training_min": 0.0,
+      "training_max": 0.2012,
+      "training_mean": 0.049,
+      "min_sane": 0.0,
+      "max_sane": 0.25,
+      "step": 0.001,
+      "default": 0.049
+    },
+    {
+      "name": "mean_symmetry",
+      "label": "Mean Symmetry",
+      "unit": "ratio",
+      "description": "Nuclear symmetry score",
+      "training_min": 0.106,
+      "training_max": 0.304,
+      "training_mean": 0.1815,
+      "min_sane": 0.1,
+      "max_sane": 0.35,
+      "step": 0.001,
+      "default": 0.1815
+    },
+    {
+      "name": "mean_fractal_dimension",
+      "label": "Mean Fractal Dimension",
+      "unit": "ratio",
+      "description": "Coastline approximation - 1",
+      "training_min": 0.0502,
+      "training_max": 0.0974,
+      "training_mean": 0.0627,
+      "min_sane": 0.03,
+      "max_sane": 0.12,
+      "step": 0.001,
+      "default": 0.0627
+    }
+  ],
+  "holdout_metrics": {
+    "accuracy": 0.9298,
+    "precision": 0.8864,
+    "recall": 0.9286,
+    "f1": 0.907,
+    "roc_auc": 0.9841,
+    "confusion_matrix": [
+      [
+        67,
+        5
+      ],
+      [
+        3,
+        39
+      ]
+    ]
+  },
+  "cv_comparison": {
+    "Baseline (Majority Class)": {
+      "accuracy_mean": 0.6274,
+      "accuracy_std": 0.0039,
+      "f1_mean": 0.0,
+      "f1_std": 0.0,
+      "roc_auc_mean": 0.5,
+      "roc_auc_std": 0.0
+    },
+    "Logistic Regression": {
+      "accuracy_mean": 0.9366,
+      "accuracy_std": 0.0197,
+      "f1_mean": 0.9123,
+      "f1_std": 0.0293,
+      "roc_auc_mean": 0.9851,
+      "roc_auc_std": 0.0064
+    },
+    "Random Forest (200 trees)": {
+      "accuracy_mean": 0.9374,
+      "accuracy_std": 0.0235,
+      "f1_mean": 0.915,
+      "f1_std": 0.0326,
+      "roc_auc_mean": 0.983,
+      "roc_auc_std": 0.0094
+    }
+  },
+  "example_patients": {
+    "high_risk": {
+      "values": {
+        "mean_radius": 21.61,
+        "mean_texture": 22.28,
+        "mean_perimeter": 144.4,
+        "mean_area": 1407.0,
+        "mean_smoothness": 0.1167,
+        "mean_compactness": 0.2087,
+        "mean_concavity": 0.281,
+        "mean_concave_points": 0.1562,
+        "mean_symmetry": 0.2162,
+        "mean_fractal_dimension": 0.0661
+      },
+      "probability": 1.0,
+      "actual_label": 1
+    },
+    "low_risk": {
+      "values": {
+        "mean_radius": 7.76,
+        "mean_texture": 24.54,
+        "mean_perimeter": 47.92,
+        "mean_area": 181.0,
+        "mean_smoothness": 0.0526,
+        "mean_compactness": 0.0436,
+        "mean_concavity": 0.0,
+        "mean_concave_points": 0.0,
+        "mean_symmetry": 0.1587,
+        "mean_fractal_dimension": 0.0588
+      },
+      "probability": 0.0,
+      "actual_label": 0
+    }
+  },
+  "coefficients": {
+    "mean_radius": 1.0518,
+    "mean_texture": 1.4899,
+    "mean_perimeter": 0.9237,
+    "mean_area": 1.2207,
+    "mean_smoothness": 1.1441,
+    "mean_compactness": -0.2804,
+    "mean_concavity": 0.8805,
+    "mean_concave_points": 1.6625,
+    "mean_symmetry": 0.4313,
+    "mean_fractal_dimension": -0.412
+  },
+  "intercept": -0.5257,
+  "test_size": 114,
+  "train_size": 455
+}
