@@ -468,7 +468,7 @@ def train_disease_model(disease_name, X, y, feature_metadata):
 
 def print_summary(diabetes_res, cancer_res):
     print("\n" + "=" * 80)
-    print("                     EXPERIMENT 10: MODEL TRAINING SUMMARY                     ")
+    print("                         MODEL TRAINING SUMMARY                         ")
     print("=" * 80)
 
     for res in [diabetes_res, cancer_res]:

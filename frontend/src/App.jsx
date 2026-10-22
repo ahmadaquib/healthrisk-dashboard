@@ -235,7 +235,7 @@ export default function App() {
             </div>
             <div className="brand-text">
               <h1>AI Disease Risk Prediction Dashboard</h1>
-              <p>AI for Healthcare Lab &bull; Clinical Decision Support</p>
+              <p>Clinical Decision Support Dashboard</p>
             </div>
           </div>
           <div className="demo-pill">

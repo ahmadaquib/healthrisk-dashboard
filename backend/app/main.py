@@ -62,7 +62,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="AI Disease Risk Prediction API",
-    description="College Mini-Project - AI for Healthcare Lab (Experiment 10)",
+    description="AI-Based Disease Risk Prediction Dashboard API",
     version="1.0.0",
     lifespan=lifespan,
 )

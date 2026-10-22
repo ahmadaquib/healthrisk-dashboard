@@ -2,6 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "author": "Aquib",
   "type": "module",
   "scripts": {
     "dev": "vite",
